@@ -1,3 +1,4 @@
 .idea
 *.iml
 index.html
+lib/config.js
