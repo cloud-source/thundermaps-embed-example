@@ -43,7 +43,7 @@ createMap will return a `mapbox-gl` [map](https://www.mapbox.com/mapbox-gl-js/ap
 createMap options
 -----------------
 The below list shows all options with defaults. Anything with required does not have a default and must be passed in.
-```json
+```javascript
 {
     //Your API Key, required
     "thundermapsKey": "",
