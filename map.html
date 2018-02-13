@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Test Map</title>
+    <title>Embeded ThunderMaps Map</title>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/then-request/2.2.0/request.min.js'></script>
     <script src='https://rawgit.com/emn178/js-sha1/master/src/sha1.js'></script>
@@ -10,7 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7/dist/polyfill.min.js"></script>
     <script src='lib/map-tile.js'></script>
     <script src="lib/map.js"></script>
+    <!-- Make sure to create a config.js from the example file in /lib -->
+    <script src="lib/config.js"></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="icon" type="image/png" href="favicon.ico">
     <style>
         html, body{
             height:100%;
@@ -18,10 +21,12 @@
         }
         .report-marker{
             cursor: pointer;
-        }
-        .report-marker:hover {
             transform: scale(1.5);
             -webkit-transform: scale(1.5);
+        }
+        .report-marker:hover {
+            transform: scale(2);
+            -webkit-transform: scale(2);
             cursor: pointer;
         }
 
@@ -30,26 +35,8 @@
 <body>
 <div id='map' style='width: 100%; height: 100%;'></div>
 <script>
-    var opts = {
-        //Your API Key, required
-        thundermapsKey: "",
-        //Your token from mapbox, required
-        mapboxToken: "",
-        //The element to place the map in, required
-        container: "map",
-        //A list of channel ids to display pins for (aka [5350]), required
-        channels: [],
-        //If a report marker is clicked, take the user to the report in the app, defaults to true
-        goToReportOnClick: true,
-        //The site to open reports with, defaults to the main site
-        appUrl: "https://app.thundermaps.com",
-        //The class for report markers, for styling, defaults to report-marker
-        pinClass: "report-marker"
-    };
-    map = createMap(opts);
-    //zoom in and center near wellington
-    map.jumpTo({zoom:  10, center: [174.96209549556272, -41.27843251088045]})
-
+    map = createMap(config);
+    map.jumpTo({zoom:  config.startZoom, center: [config.startLongitude, config.startLatitude]})
 </script>
 </body>
 </html>
