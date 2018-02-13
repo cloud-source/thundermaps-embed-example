@@ -8,26 +8,21 @@ Obtaining API Key and Channel ID
 --------------------------------
 You can obtain your API Key and Channel ID for any ThunderMaps channel you are allowed to report to by:
 
-1. Going to https://app.thundermaps.com/#!/channel-manager
-1. Select the channel you want to send reports to from the drop down box on the right
+1. Going to the [Channel Manager](https://app.thundermaps.com/#!/channel-manager)
+1. Select the channel you want to view from the drop down box on the right
 1. Click the 'Integrations' Tab
 1. Click the 'ThunderBot' Intergration
 
-API key
--------
-To use any of these examples you will need a ThunderMaps API key. If you do not have one, you will need to create a ThunderMaps account at https://app.thundermaps.com/#!/sign-up.
+Once you have your channel id and token, supply them as options to `createMap`.
 
-Once you have your API key you will need to supply it as an option to `createMap`.
-
-Channel ID
-----------
-In order to send a report you will need to create a channel to submit it to. You can do this at https://app.thundermaps.com/#!/new-channel.
-
-Once you have your channel ID you will need to supply it as an option to `createMap`. Note that multiple ids may be used to show multiple channels on your map.
+Obtaining a Channel ID for a public channel
+-------------------------------------------
+If you visit the channel on the thundermaps website, the id will be visible in the URL for the channel.
+For example, the link <https://app.thundermaps.com/#!/channels/5350> is for the channel Mobility Park Locations, and the Channel ID is `5350`. 
 
 MapBox Token
 ------------
-In order to display a map, you will need to register an account at https://mapbox.com, and then go to https://www.mapbox.com/account/ and supply your token as an option to `createMap`.
+In order to display a map, you will need to register an account at [MapBox](https://mapbox.com), and then go to your [Mapbox Account](https://www.mapbox.com/account/) and supply retrieve your token, and then supply it as an option to `createMap`.
 
 Usage
 -----
