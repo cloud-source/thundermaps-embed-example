@@ -2,7 +2,7 @@ Copyright 2018 ThunderMaps. Licenced under the MIT Licence, see LICENSE File for
 # thundermaps-embed-example
 This repository contains an example that shows how to embed a map with pins on your website.
 To use this example, you will need to obtain a ThunderMaps API key, a channel ID and a MapBox token.
-See this example for a working example that just needs keys. [Example](map.html)
+See [map.html](map.html) for a working example that just needs keys. 
 
 Obtaining API Key and Channel ID
 --------------------------------
