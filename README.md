@@ -27,7 +27,7 @@ Once you have your channel ID you will need to supply it as an option to `create
 Usage
 -----
 Import the below scripts, and then call `createMap` with the required options.
-```
+```html
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/then-request/2.2.0/request.min.js'></script>
     <script src='https://rawgit.com/emn178/js-sha1/master/src/sha1.js'></script>
@@ -43,21 +43,21 @@ createMap will return a `mapbox-gl` [map](https://www.mapbox.com/mapbox-gl-js/ap
 createMap options
 -----------------
 The below list shows all options with defaults. Anything with required does not have a default and must be passed in.
-```
+```json
 {
     //Your API Key, required
-    thundermapsKey: "",
+    "thundermapsKey": "",
     //Your token from mapbox, required
-    mapboxToken: "",
+    "mapboxToken": "",
     //The element to place the map in, required
-    container: "",
+    "container": "",
     //A list of channel ids to display pins for (aka [5350]), required
-    channels: [],
+    "channels": [],
     //If a report marker is clicked, take the user to the report in the app
-    goToReportOnClick: true,
+    "goToReportOnClick": true,
     //The site to open reports with
-    appUrl: "https://app.thundermaps.com",
+    "appUrl": "https://app.thundermaps.com",
     //The class for report markers, for styling
-    pinClass: "report-marker"
+    "pinClass": "report-marker"
 };
 ```
