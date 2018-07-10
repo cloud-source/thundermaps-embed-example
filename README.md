@@ -53,6 +53,12 @@ The below list shows all options with defaults. Anything with required does not 
     "container": "",
     //A list of channel ids to display pins for (aka [5350]), required
     "channels": [],
+    //Where to center the map, latitude, required
+    "startLatitude": "",
+    //Where to center the map, longitude, required
+    "startLongitude": "",,
+    //Where to center the map, zoom level, required
+    "startZoom": "",
     //If a report marker is clicked, take the user to the report in the app
     "goToReportOnClick": true,
     //The site to open reports with
