@@ -29,13 +29,12 @@ Usage
 Import the below scripts, and then call `createMap` with the required options.
 ```html
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/then-request/2.2.0/request.min.js'></script>
-    <script src='https://rawgit.com/emn178/js-sha1/master/src/sha1.js'></script>
-    <script src='https://rawgit.com/mapbox/wellknown/master/wellknown.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7/dist/polyfill.min.js"></script>
-    <script src='lib/map-tile.js'></script>
-    <script src="lib/map.js"></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/then-request/2.2.0/request.min.js'></script>
+<script src='https://rawgit.com/emn178/js-sha1/master/src/sha1.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7/dist/polyfill.min.js"></script>
+<script src='lib/map-tile.js'></script>
+<script src="lib/map.js"></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css' rel='stylesheet' />
 ```
 
 createMap will return a `mapbox-gl` [map](https://www.mapbox.com/mapbox-gl-js/api/#map).
@@ -44,26 +43,33 @@ createMap options
 -----------------
 The below list shows all options with defaults. Anything with required does not have a default and must be passed in.
 ```javascript
-{
+config = {
     //Your API Key, required
-    "thundermapsKey": "",
+    thundermapsKey: "",
     //Your token from mapbox, required
-    "mapboxToken": "",
+    mapboxToken: "",
+    //The branding bundle id, e.g. com.thundermaps.main, required
+    bundleID: "",
     //The element to place the map in, required
-    "container": "",
+    container: "",
     //A list of channel ids to display pins for (aka [5350]), required
-    "channels": [],
+    channels: [],
     //Where to center the map, latitude, required
-    "startLatitude": "",
+    startLatitude: "",
     //Where to center the map, longitude, required
-    "startLongitude": "",,
+    startLongitude: "",
     //Where to center the map, zoom level, required
-    "startZoom": "",
-    //If a report marker is clicked, take the user to the report in the app
-    "goToReportOnClick": true,
+    startZoom: "",
+    //If a report marker is clicked, take the user to the report in the app, else show report data inline
+    goToReportOnClick: false,
+    //What fields should be displayed when using inline mode, if missing all fields are shown.
+    visible_fields: [],
     //The site to open reports with
-    "appUrl": "https://app.thundermaps.com",
+    appUrl: "https://app.thundermaps.com",
     //The class for report markers, for styling
-    "pinClass": "report-marker"
+    pinClass: "report-marker"
 };
 ```
+Inline Mode
+-----------
+If goToReportOnClick is false or missing, report data will be shown inline on click. Currently, only text fields are displayed.
