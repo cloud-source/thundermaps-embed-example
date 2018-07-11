@@ -61,9 +61,9 @@ config = {
     //Where to center the map, zoom level, required
     startZoom: "",
     //If a report marker is clicked, take the user to the report in the app, else show report data inline
-    openReportInApp: false,
+    openReportInNewWindow: false,
     //What fields should be displayed when using inline mode, if missing all fields are shown.
-    //Based on field keys, in the style of "f_3220_1_1"
+    //Based on field labels, e.g. "Description"
     visible_fields: [],
     //The site to open reports with
     appUrl: "https://app.thundermaps.com",
