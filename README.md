@@ -61,7 +61,7 @@ config = {
     //Where to center the map, zoom level, required
     startZoom: "",
     //If a report marker is clicked, take the user to the report in the app, else show report data inline
-    goToReportOnClick: false,
+    openReportInApp: false,
     //What fields should be displayed when using inline mode, if missing all fields are shown.
     //Based on field keys, in the style of "f_3220_1_1"
     visible_fields: [],
