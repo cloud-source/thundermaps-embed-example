@@ -63,6 +63,7 @@ config = {
     //If a report marker is clicked, take the user to the report in the app, else show report data inline
     goToReportOnClick: false,
     //What fields should be displayed when using inline mode, if missing all fields are shown.
+    //Based on field keys, in the style of "f_3220_1_1"
     visible_fields: [],
     //The site to open reports with
     appUrl: "https://app.thundermaps.com",
