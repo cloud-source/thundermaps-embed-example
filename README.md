@@ -73,4 +73,4 @@ config = {
 ```
 Inline Mode
 -----------
-If goToReportOnClick is false or missing, report data will be shown inline on click. Currently, only text fields are displayed.
+If openReportInNewWindow is false or missing, report data will be shown inline on click. All field types except photos are shown.
